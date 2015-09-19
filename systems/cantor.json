@@ -1,0 +1,9 @@
+{
+	"start":"A",
+	"rules": {
+		"A": "ABA",
+		"B": "BBB"
+	},
+	"angle":45,
+	"iter":3
+} 

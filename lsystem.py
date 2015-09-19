@@ -25,7 +25,7 @@ if __name__ == '__main__':
     steps = {0: lsystem['start']}
 
     # Apply the rules at each iteration
-    for i in range(1, lsystem['iter']):
+    for i in range(1, lsystem['iter']+1):
         steps[i] = apply_rules(lsystem['rules'], steps[i-1])
 
     print steps

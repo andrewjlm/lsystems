@@ -1,0 +1,9 @@
+{
+	"start":"FX",
+	"rules": {
+		"F": "X+YF+",
+		"Y": "-FX-Y"
+	},
+	"angle":90,
+	"iter":3
+} 

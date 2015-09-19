@@ -1,0 +1,9 @@
+{
+	"start":"X",
+	"rules": {
+		"X": "F-[[X]+X]+F[+FX]-X",
+		"F": "FF"
+	},
+	"angle":25,
+	"iter":3
+} 
