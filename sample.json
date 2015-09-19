@@ -1,0 +1,8 @@
+{
+	"start":"F",
+	"rules": {
+		"F": "F+F-F-F+F"
+	},
+	"angle":45,
+	"iter":3
+} 
