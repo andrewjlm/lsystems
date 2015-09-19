@@ -1,4 +1,5 @@
 import json
+from sys import argv
 
 def apply_rules(rules, state):
     result = list()
@@ -13,10 +14,11 @@ def apply_rules(rules, state):
     return "".join(result)
 
 if __name__ == '__main__':
+    system_file = argv[1]
     lsystem = {}
 
     # Load lsystem from file
-    with open("sample.json") as json_file:
+    with open(system_file) as json_file:
         lsystem = json.load(json_file)
 
     # The first iteration is always 'start'
