@@ -1,4 +1,5 @@
 import json
+import turtle
 from sys import argv
 
 def apply_rules(rules, state):
@@ -12,6 +13,17 @@ def apply_rules(rules, state):
 
     # Join the list into one string
     return "".join(result)
+
+def draw_state(step, pen):
+    print step
+    for c in step:
+        if c == 'F':
+            pen.forward(10)
+        elif c == '+':
+            # TODO: Need to read the angle from somewhere
+            pen.left(90)
+        elif c == '-':
+            pen.right(90)
 
 if __name__ == '__main__':
     system_file = argv[1]
@@ -28,4 +40,13 @@ if __name__ == '__main__':
     for i in range(1, lsystem['iter']+1):
         steps[i] = apply_rules(lsystem['rules'], steps[i-1])
 
-    print steps
+    # Create drawing environment
+    wn = turtle.Screen()
+    pen = turtle.Turtle()
+
+    # This is ugly right now and I should change it - maybe refactor
+    # steps to a list
+    print steps[lsystem['iter']]
+    draw_state(steps[lsystem['iter']], pen)
+
+    turtle.mainloop()
