@@ -15,7 +15,7 @@ def apply_rules(rules, state):
     return "".join(result)
 
 def draw_state(step, pen):
-    print step
+    print(step)
     for c in step:
         if c == 'F':
             pen.forward(10)
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     # This is ugly right now and I should change it - maybe refactor
     # steps to a list
-    print steps[lsystem['iter']]
+    print(steps[lsystem['iter']])
     draw_state(steps[lsystem['iter']], pen)
 
     turtle.mainloop()
