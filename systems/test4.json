@@ -1,0 +1,11 @@
+{
+    "start":"E",
+    "rules":{
+        "F":"+EFFM",
+        "V":"+GF+FG",
+        "M":"-FF",
+        "E":"F+G+VMFEV"
+    },
+    "angle":60,
+    "iter":6
+}

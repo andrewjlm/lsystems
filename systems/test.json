@@ -1,0 +1,9 @@
+{
+    "start":"OF",
+    "rules": {
+        "F":"FO+FO",
+        "O":"-FF--F-OF"
+    },
+    "angle":60,
+    "iter":6
+}

@@ -1,0 +1,13 @@
+{
+    "start":"VVJL",
+    "rules": {
+        "F":"JKVJK",
+        "Q":"J+KVL",
+        "V":"+KLFFF",
+        "L":"-V",
+        "J":"Q+FLK+",
+        "K":"+JK"
+    },
+    "angle":60,
+    "iter":7
+}

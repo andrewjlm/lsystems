@@ -22,6 +22,7 @@ class State(object):
         self.steps = [self.current]
         self.movement = Point(10, 0)
         self.angle = angle
+        self.stack = []
 
 
     def rotate_movement(self, angle):
@@ -52,7 +53,7 @@ def apply_rules(rules, state):
     return "".join(result)
 
 def parse_step(step, state):
-    if step == 'F':
+    if step in 'F':
         def draw_step(state):
             state.current += state.movement
             state.steps.append(state.current)
@@ -62,6 +63,17 @@ def parse_step(step, state):
     elif step == '-':
         def draw_step(state):
             state.rotate_movement(-state.angle)
+    elif step == '[':
+        def draw_step(state):
+            state.stack.append(state.current)
+            state.stack.append(state.movement)
+    elif step == ']':
+        def draw_step(state):
+            state.movement = state.stack.pop()
+            state.current = state.stack.pop()
+    else:
+        def draw_step(state):
+            pass
 
     return draw_step
 
@@ -97,7 +109,3 @@ if __name__ == '__main__':
     p.line(xs, ys, line_width=2)
 
     show(p)
-
-    # This is ugly right now and I should change it - maybe refactor
-    # steps to a list
-    # print(steps[lsystem['iter']])

@@ -1,0 +1,8 @@
+{
+    "start":"FFFF",
+    "rules":{
+        "F":"[FVF]F+"
+    },
+    "angle":45,
+    "iter":6
+}

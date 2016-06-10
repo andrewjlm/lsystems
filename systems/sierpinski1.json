@@ -1,9 +1,0 @@
-{
-	"start":"A",
-	"rules": {
-		"A": "+B-A-B+",
-		"B": "-A+B+A-"
-	},
-	"angle":60,
-	"iter":3
-} 

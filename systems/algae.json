@@ -1,9 +1,0 @@
-{
-	"start":"A",
-	"rules": {
-		"A": "AB",
-		"B": "A"
-	},
-	"angle":45,
-	"iter":7
-} 
